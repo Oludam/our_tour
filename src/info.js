@@ -9,8 +9,6 @@ export const info = [{
         id: 1,
         notInsterested: false
     },
-
-
     {
         image: "/image.jpg",
         title: "Best of Paris in 7 Days Tour",
@@ -19,8 +17,6 @@ export const info = [{
         id: 2,
         notInsterested: false
     },
-
-
     {
         image: "/image.jpg",
         title: "Best of Paris in 7 Days Tour",
