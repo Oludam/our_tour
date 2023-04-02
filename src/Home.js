@@ -3,6 +3,7 @@
 import TourCard from "./TourCard";
 import { info } from "./info";
 import { useState, useEffect } from "react";
+import Loader from "./Loader";
 
 const Home = () => {
 
@@ -34,17 +35,18 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div style={{ marginBottom: '70px' }}>
             {allGone ?
-                <div>
+                <div className="no-tours">
+                    <h1>No Tours Left</h1>
                     <button onClick={() => loadPage()} >Refresh</button>
-                </div> :
-                <>
-                    <div className="main-title">
-                        <h2>Our Tours</h2>
-                        <div></div>
-                    </div>
-                    {loading ? <div>loading...</div> :
+                </div> : loading ? <center >< Loader /></center> :
+                    <>
+                        <div className="main-title">
+                            <h2>Nigeria Tours</h2>
+                            <div></div>
+                        </div>
+                        <br />
                         <div className="tour-container">
 
                             {data &&
@@ -55,8 +57,9 @@ const Home = () => {
                                 ))
                             }
                         </div>
-                    }
-                </>}
+
+                    </>
+            }
         </div>
     );
 }
